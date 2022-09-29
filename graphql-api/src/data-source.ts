@@ -9,4 +9,11 @@ export class MusicAPI extends RESTDataSource {
   async getAlbums() {
     return this.get("/albums");
   }
+  async getAlbum(id: number) {
+    return this.get(`/albums/${id}`);
+  }
+
+  async getArtist(id: number) {
+    return this.get(`/artists/${id}`);
+  }
 }
